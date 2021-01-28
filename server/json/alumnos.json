@@ -1,0 +1,35 @@
+{
+    "data":[
+        {
+            "idusu": "Alum1",
+            "nombre": "Juana",
+            "apellido": "Rodrigues Zambrano",
+            "docIden": "43568952",
+            "address": "Callao - Av. Venezuela 562",
+            "correo": "Corazonamoroso@outlook.com",
+            "telefono": "985421378",
+            "contraseña": "Maria123"
+        },
+        {
+            "idusu": "Alum2",
+            "nombre": "Christopher",
+            "apellido": "Lopez Ramirez",
+            "docIden": "80568952",
+            "address": "Miraflores - Av Shell 425",
+            "correo": "Corazonamoroso@outlook.com",
+            "telefono": "985421378",
+            "contraseña": "Maria123"
+        },
+        {
+            "idusu": "Alum3",
+            "nombre": "Juan",
+            "apellido": "Zambrano Lumbreras",
+            "docIden": "60568952",
+            "address": "San Miguel - Calle Tusilagos 985",
+            "correo": "Azambrano@outlook.com",
+            "telefono": "985421378",
+            "contraseña": "Maria123"
+        }
+    ]
+
+}

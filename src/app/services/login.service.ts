@@ -4,14 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CursoService {
+export class LoginService {
 
   constructor(private readonly http: HttpClient) { }
-
-  getCursos(){
-    return this.http.get('/api/curso/GetCursos');
-  }
-  getMatricula(){
-    return this.http.get('/api/matricula/GetMatricula');
+  getUsuaMatricula(){
+    return this.http.get('/api/matricula/GetUsuaMatricula');
   }
 }
