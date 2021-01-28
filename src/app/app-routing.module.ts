@@ -11,6 +11,8 @@ import { GestionarComponent } from './pages/gestionar/gestionar.component'
 import { EditarComponent } from './pages/editar/editar.component'
 import { AlumnoComponent } from './pages/alumno/alumno.component'
 import {IntranetComponent } from './pages/intranet/intranet.component'
+import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.component';
+import { IngcursoComponent } from './pages/admin/ingcurso/ingcurso.component';
 
 const routes: Routes = [
     
@@ -25,6 +27,8 @@ const routes: Routes = [
     { path: 'editar', component: EditarComponent },
     { path: 'alumno', component: AlumnoComponent },
     { path: 'intranet', component: IntranetComponent },
+    { path: 'admin/gestcursos', component: GestcursosComponent},
+    { path: 'admin/ingcurso', component: IngcursoComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
