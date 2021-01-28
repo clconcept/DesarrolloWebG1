@@ -1,0 +1,86 @@
+<div class="p-3 mb-2 bg-dark text-white">ADMINISTRACIÓN DE CURSOS:</div>
+<br>
+<div class="container">
+    <h2>
+        Listado de cursos
+    </h2>
+    <a class="btn btn-primary" routerLink="../ingcurso">Añadir Curso</a>
+<br>
+<div class="container-xxl d-flex align-items-md-center">
+    <br>
+    <br>
+    <form class="bd-search position-relative me-auto">
+      <input type="search" class="form-control" id="search-input" placeholder="Buscar Curso" aria-label="Search docs for..." autocomplete="off" data-bd-docs-version="5.0">
+    </form></div>
+    <style>
+  /* Cambios sobre la propia tabla */
+  table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  /* Espacio de relleno en celdas y cabeceras */
+  td,
+  th {
+    padding: 10px;
+  }
+  /* Modificación de estilos en cabeceras */
+  th {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  /* Modificación de estilos en celdas */
+  td {
+    text-align: center;
+    border-bottom: 2px solid #111;
+    color: #333;
+    font-size: 18px;
+  }
+</style>
+<br>
+<table>
+  <tr>
+    <th>Curso</th>  
+    <th>Sección</th>
+    <th>Horario </th>
+    <th>Minimo Alumnos</th>
+    <th>Alumnos Matriculados</th>
+    <th>Editar</th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td>Ingles Basico 1</td>
+    <td>N17B</td>
+    <td>Miercoles y Jueves 14:00- 16:00</td>
+    <td> 20</td>
+    <td> 4 </td>
+    <td><a href="#" class="alert-link">Mostrar </a></td>
+    <td><a routerLink="../ingcurso" class="alert-link">Editar </a></td>
+    <td><a href="#" class="text-primary">Eliminar</a></td>
+  </tr>
+
+  <tr>
+    <td>Ingles Basico 2</td>
+    <td>L34A</td>
+    <td>Lunes y viernes 18:00-20:00 </td>
+    <td>22</td>
+    <td>18</td>
+    <td><a href="#" class="alert-link">Mostrar </a></td>
+    <td><a routerLink="../ingcurso" class="alert-link">Editar </a></td>
+    <td><a href="#" class="text-primary">Eliminar</a></td>
+  </tr>
+
+   <tr>
+    <td>Ingles Basico 3</td>
+    <td>E23A </td>
+    <td>Viernes y sábado 17:00-19:00</td>
+    <td>22</td>
+    <td>12</td>
+    <td><a href="#" class="alert-link">Mostrar </a></td>
+    <td><a routerLink="../ingcurso" class="alert-link">Editar </a></td>
+    <td><a href="#" class="text-primary">Eliminar</a></td>
+  </tr>
+</table>
+</div>
