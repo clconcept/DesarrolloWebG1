@@ -13,6 +13,9 @@ import { CursoComponent } from './pages/curso/curso.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IntranetComponent } from './pages/intranet/intranet.component';
 import { LogueoComponent } from './pages/logueo/logueo.component';
+import { GestionarComponent } from './pages/gestionar/gestionar.component';
+import { EditarComponent } from './pages/editar/editar.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { LogueoComponent } from './pages/logueo/logueo.component';
     CursoComponent,
     IntranetComponent,
     LogueoComponent,
+    GestionarComponent,
+    EditarComponent,
+    AlumnoComponent,
     ],
   imports: [
     BrowserModule,
