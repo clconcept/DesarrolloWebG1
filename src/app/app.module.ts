@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CursoComponent } from './pages/curso/curso.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IntranetComponent } from './pages/intranet/intranet.component';
+import { LogueoComponent } from './pages/logueo/logueo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { IntranetComponent } from './pages/intranet/intranet.component';
     HomeComponent,
     CursoComponent,
     IntranetComponent,
+    LogueoComponent,
     ],
   imports: [
     BrowserModule,
