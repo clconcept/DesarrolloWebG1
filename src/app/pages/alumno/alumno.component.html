@@ -1,0 +1,56 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoAhE7DwV3Qx_JdS3qSlAnUMTvexokt3jkQ&usqp=CAU"><span class="font-weight-bold">Alumn@ nuev@</span><span class="text-black-50"></span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Registro del Alumno</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Nombres</label><input type="text" class="form-control" placeholder="Nombres" value="" ></div>
+                    <div class="col-md-6"><label class="labels">Apellidos</label><input type="text" class="form-control" value="" placeholder="Apellidos" ></div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Telefono</label><input type="text" class="form-control" placeholder="Telefono" value="" ></div>
+                    <div class="col-md-6"><label class="labels">DNI</label><input type="text" class="form-control" value="" placeholder="DNI" ></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Correo</label><input type="text" class="form-control" placeholder="Correo" value="" ></div>
+                    <div class="col-md-12"><label class="labels">Dirección</label><input type="text" class="form-control" placeholder="Dirección" value="" ></div>
+                    <div class="col-md-12"><label class="labels">Modalidad</label>
+                    <select class="form-control">
+                        <option selected="">Modalidad</option>
+                        <option>Regular</option>
+                        <option>Becado</option>
+                        <option>Concurso</option>
+                        <option>Ingresante</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12"><label class="labels">Sede</label>
+                        <select class="form-control">
+                            <option selected="">Sede</option>
+                            <option>Chorrillos</option>
+                            <option>Cercado</option>
+                            <option>Miraflores</option>
+                            <option>Santiago de Surco</option>
+                            <option>San Borja</option>
+                          </select>
+                        </div>
+                    <div class="col-md-12"><label class="labels">Estado de Matricula</label><input type="text" class="form-control" placeholder="Ingresante" value="" disabled></div>
+                </div>
+                <div class="mt-5 text-center"><button onclick="window.location.href='/gestionar'"  class="btn btn-primary profile-button" type="button">Actualizar</button></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="col-md-12"><label><input type="checkbox" id="cbox1" value="first_checkbox" checked> Activar/Desactivar (Usuario)</label><input type="text" class="form-control" placeholder="Activo" value="" disabled></div> <br>
+                <div class="col-md-12"><label class="labels">Contraseña</label><input type="password" class="form-control" placeholder="Contraseña" value=""></div>
+                <div class="mt-5 text-center"><button onclick="window.location.href='/gestionar'"  class="btn btn-primary profile-button" type="button">Actualizar</button></div>
+            </div>
+        </div>
+    </div>
+</div>

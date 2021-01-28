@@ -7,6 +7,9 @@ import { MatriculaComponent } from './pages/matricula/matricula.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CursoComponent } from './pages/curso/curso.component'
 import { LogueoComponent } from './pages/logueo/logueo.component'
+import { GestionarComponent } from './pages/gestionar/gestionar.component'
+import { EditarComponent } from './pages/editar/editar.component'
+import { AlumnoComponent } from './pages/alumno/alumno.component'
 import {IntranetComponent } from './pages/intranet/intranet.component'
 import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.component';
 import { IngcursoComponent } from './pages/admin/ingcurso/ingcurso.component';
@@ -20,6 +23,9 @@ const routes: Routes = [
     { path: 'matricula', component: MatriculaComponent },
     { path: 'home', component: HomeComponent },
     { path: 'logueo', component: LogueoComponent },
+    { path: 'gestionar', component: GestionarComponent },
+    { path: 'editar', component: EditarComponent },
+    { path: 'alumno', component: AlumnoComponent },
     { path: 'intranet', component: IntranetComponent },
     { path: 'admin/gestcursos', component: GestcursosComponent},
     { path: 'admin/ingcurso', component: IngcursoComponent},
