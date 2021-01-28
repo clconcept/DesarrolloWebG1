@@ -6,6 +6,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { MatriculaComponent } from './pages/matricula/matricula.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CursoComponent } from './pages/curso/curso.component'
+import { LogueoComponent } from './pages/logueo/logueo.component'
 import {IntranetComponent } from './pages/intranet/intranet.component'
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path: 'nosotros', component: NosotrosComponent },
     { path: 'matricula', component: MatriculaComponent },
     { path: 'home', component: HomeComponent },
+    { path: 'logueo', component: LogueoComponent },
     { path: 'intranet', component: IntranetComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
