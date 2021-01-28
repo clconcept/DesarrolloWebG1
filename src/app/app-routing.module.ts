@@ -17,6 +17,7 @@ import { IngcursoComponent } from './pages/admin/ingcurso/ingcurso.component';
 const routes: Routes = [
     
     { path: 'curso/:id', component: CursoComponent },
+    { path: 'matricula/:id', component: MatriculaComponent },
     { path: 'curso', component: CursoComponent },
     { path: 'contactenos', component: ContactenosComponent },
     { path: 'nosotros', component: NosotrosComponent },

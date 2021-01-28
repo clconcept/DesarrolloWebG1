@@ -1,1 +1,69 @@
-<div>"prueba q es el ultimo"</div>
+<section id="portfolio" class="bg-light" style="padding: 75px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 *ngIf="showMatri == 'true'" class="text-uppercase section-heading">MATRICULA - CURSOS</h2>
+                <h2 *ngIf="showMatri == 'false'" class="text-uppercase section-heading">MATRICULA</h2>
+            </div>            
+        </div>
+       
+        <div class="row">
+
+              <div *ngFor="let p of cursos" class="col-sm-6 col-md-4 portfolio-item">
+                    <a routerLink="/matricula/{{ p.id }}" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div><img class="img-fluid" src='{{ p.image }}'></a>
+                        <div class="portfolio-caption">
+                            <h4>{{ p.curso }}</h4>
+                            <p class="text-muted"><strong><em>{{ p.price }}</em><br></strong></p>
+                            <p class="text-muted">{{ p.address }}</p>
+                            <p></p>
+                           
+                        </div>
+              </div>
+              <div  *ngIf="showMatri == 'false'" class="col-sm-6 col-md-4 portfolio-item">
+                <div *ngFor="let u of idusu" class="col-sm-8 col-md-4 portfolio-item">
+                    <a routerLink="/matricula/{{ u.idusu }}" class="portfolio-link" data-toggle="modal"></a>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Datos Personales</div>
+                        <table class="table">
+                          <tr>
+                          <th>Código:</th>
+                          <th><h4>{{ u.idusu }}</h4></th>
+                          </tr>
+                          <tr>
+                            <th>Nombres:</th>
+                            <th>{{ u.nombre}}</th>
+                          </tr>
+                          <tr>
+                            <th>Apellidos:</th>
+                            <th>{{ u.apellido}}</th>
+                          </tr>
+                          <tr>
+                            <th>Documento Identidad:</th>
+                            <th>{{ u.docIden}}</th>
+                          </tr>
+                          <tr>
+                            <th>Dirección:</th>
+                            <th>{{ u.address}}</th>
+                          </tr>
+                          <tr>
+                            <th>Nro. Contacto:</th>
+                            <th>{{ u.telefono}}</th>
+                          </tr>
+                          <tr>
+                            <th>Correo Electronico:</th>
+                            <th>{{ u.correo}}</th>
+                          </tr>
+                        </table>
+                      </div>
+                     </div>               
+                </div>        
+        </div>
+        <div *ngIf="showMatri == 'false'" >
+        <button onclick="window.location.href='/matricula'" type="button" class="log-btn" >Confirmar Matricula</button>
+        </div>
+  </div> 
+</section> 
