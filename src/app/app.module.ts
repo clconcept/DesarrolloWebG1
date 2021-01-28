@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CursoComponent } from './pages/curso/curso.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IntranetComponent } from './pages/intranet/intranet.component';
 import { LogueoComponent } from './pages/logueo/logueo.component';
 
@@ -44,7 +44,8 @@ import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

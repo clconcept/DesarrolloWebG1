@@ -5,7 +5,7 @@
     <div class="form-group">
              <label for="input_name" class="col-lg-2 control-label">Nombre del Curso</label>
         <div class="col-lg-10">
-              <input type="text" class="form-control" id="input_name" placeholder="Ejem. Curso">
+              <input type="text" class="form-control" id="input_name" placeholder="Ejem. Curso" ngModel required>
         </div>
     </div>
 
@@ -13,7 +13,7 @@
      <div class="form-group">
              <label for="input_name" class="col-lg-2 control-label">Nivel</label>
         <div class="col-lg-10">
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ingrese Nivel">
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ingrese Nivel" ngModel required>
             <datalist id="datalistOptions">
                 <option value="Inducciòn">
                 <option value="Intermedio">
@@ -27,7 +27,7 @@
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Tipo</label>
          <div class="col-lg-10">
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ingrese Tipo">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ingrese Tipo" ngModel required>
         <datalist id="datalistOptions">
                 <option value="Niños">
                 <option value="Jóvenes">
@@ -41,14 +41,14 @@
     <div class="form-group">
             <label for="input_name" class="col-lg-2 control-label">Costto</label>
         <div class="col-lg-10">
-              <input type="number" class="form-control" id="input_costo" placeholder="Ingrese costo">
+              <input type="number" class="form-control" id="input_costo" placeholder="Ingrese costo" ngModel required>
         </div>
     </div>
 
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Sede</label>
          <div class="col-lg-10">
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Sede">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Sede" ngModel required>
         <datalist id="datalistOptions">
                 <option value="Miraflores">
                 <option value="San Isidro">
@@ -59,7 +59,7 @@
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Profesor</label>
          <div class="col-lg-10">
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Profesor">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Profesor" ngModel required>
         <datalist id="datalistOptions">
                 <option value="Profesor 1">
                 <option value="Profesor 2">
@@ -73,7 +73,7 @@
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Modalidad</label>
          <div class="col-lg-10">
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Modalidad">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Modalidad" ngModel required>
         <datalist id="datalistOptions">
                 <option value="Virtual">
                 <option value="Presencial">
@@ -83,20 +83,20 @@
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Fecha Inicio</label>
         <div class="col-lg-10">
-          <input type="date" class="form-control" id="input_inicio" placeholder="Fecha inicio">
+          <input type="date" class="form-control" id="input_inicio" placeholder="Fecha inicio" ngModel required>
         </div>
     </div>
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Fecha Fin</label>
         <div class="col-lg-10">
-          <input type="date" class="form-control" id="input_fin" placeholder="Fecha fin">
+          <input type="date" class="form-control" id="input_fin" placeholder="Fecha fin" ngModel required>
         </div>
     </div>
 
     <div class="form-group">
         <label for="input_name" class="col-lg-2 control-label">Profesor</label>
          <div class="col-lg-10">
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Profesor">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Profesor" ngModel required>
         <datalist id="datalistOptions">
                 <option value="Horario 1">
                 <option value="Horario 2">
@@ -109,13 +109,13 @@
         <div class="form-group">
             <label for="input_name" class="col-lg-2 control-label">Vacantes totales</label>
         <div class="col-lg-10">
-            <input type="number" class="form-control" id="input_costo" placeholder="Ingrese vacantes">
+            <input type="number" class="form-control" id="input_costo" placeholder="Ingrese vacantes" ngModel required>
         </div>
     </div>
     <div class="form-group">
             <label for="input_name" class="col-lg-2 control-label">Numero minimo de alumnos</label>
         <div class="col-lg-10">
-              <input type="number" class="form-control" id="input_costo" placeholder="Ingrese minimo alumnos">
+              <input type="number" class="form-control" id="input_costo" placeholder="Ingrese minimo alumnos" ngModel required>
         </div>
     </div>
 
@@ -124,13 +124,13 @@
     	<label for="depa" class="col-lg-2 control-label">Adjuntar Imagen </label>
     	<br>
     	<div class="col-lg-10">
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" ngModel required>
         </div>
      </div>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <button type="submit" class="btn btn-default">Guardar</button>
+      <button type="submit" routerLink="../gestcursos"  class="btn btn-default">Guardar</button>
     </div>
   </div>
 </form>
