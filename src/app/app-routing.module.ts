@@ -5,14 +5,15 @@ import { ContactenosComponent } from './pages/contactenos/contactenos.component'
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { MatriculaComponent } from './pages/matricula/matricula.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CursoComponent } from './pages/curso/curso.component'
-import { LogueoComponent } from './pages/logueo/logueo.component'
-import { GestionarComponent } from './pages/gestionar/gestionar.component'
-import { EditarComponent } from './pages/editar/editar.component'
-import { AlumnoComponent } from './pages/alumno/alumno.component'
-import {IntranetComponent } from './pages/intranet/intranet.component'
+import { CursoComponent } from './pages/curso/curso.component';
+import { LogueoComponent } from './pages/logueo/logueo.component';
+import { GestionarComponent } from './pages/gestionar/gestionar.component';
+import { EditarComponent } from './pages/editar/editar.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
+import {IntranetComponent } from './pages/intranet/intranet.component';
 import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.component';
 import { IngcursoComponent } from './pages/admin/ingcurso/ingcurso.component';
+import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.component';
 
 const routes: Routes = [
     
@@ -30,6 +31,7 @@ const routes: Routes = [
     { path: 'intranet', component: IntranetComponent },
     { path: 'admin/gestcursos', component: GestcursosComponent},
     { path: 'admin/ingcurso', component: IngcursoComponent},
+    { path: 'confirmacion', component: ConfirmacionComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

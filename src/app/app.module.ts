@@ -20,6 +20,7 @@ import { AlumnoComponent } from './pages/alumno/alumno.component';
 
 import { IngcursoComponent } from './pages/admin/ingcurso/ingcurso.component';
 import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.component';
+import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.compone
 
     GestcursosComponent,
     IngcursoComponent,
+    ConfirmacionComponent,
     ],
   imports: [
     BrowserModule,
