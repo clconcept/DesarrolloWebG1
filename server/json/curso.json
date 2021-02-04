@@ -41,6 +41,27 @@
             "price": "Costo S/. 350",
             "address": "Miraflores - Lunes a Viernes 10 a 12 m",
             "image": "assets/img/cursos/curso6.jpg"
+        },
+        {
+            "id": 7,
+            "curso": "Portugues Basico 1",
+            "price": "Costo S/. 350",
+            "address": "San Borja - Lunes a Viernes 4 a 6 pm",
+            "image": "assets/img/cursos/curso7.jpg"
+        },
+        {
+            "id": 8,
+            "curso": "Portugues Basico 2",
+            "price": "Costo S/. 350",
+            "address": "San Borja - Lunes a Viernes 4 a 6 pm",
+            "image": "assets/img/cursos/curso8.jpg"
+        },
+        {
+            "id": 9,
+            "curso": "Toefl",
+            "price": "Costo S/. 350",
+            "address": "San Borja - Lunes a Viernes 6 a 8 pm",
+            "image": "assets/img/cursos/curso9.jpg"
         }
     ]
 }
