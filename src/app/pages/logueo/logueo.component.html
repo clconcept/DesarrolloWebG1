@@ -1,5 +1,5 @@
 <div class="login-form" >
-    <h1>Logueo</h1>
+    <h1> {{ paramId == '1' ? "Ingreso Portal Administrador":"Ingreso Portal Alumno" }} </h1>
     <div class="form-group ">
       <input type="text" class="form-control" placeholder="Nombre de Usuario " id="UserName">
       <i class="fa fa-user"></i>
@@ -10,7 +10,7 @@
     </div>
      <span class="alert">Invalido usuario o clave</span>
      <a class="link" href="#">¿Olvidaste tu contraseña?</a>
-    <button onclick="window.location.href='/intranet'" type="button" class="log-btn" >Iniciar Sesión</button>
+    <a class="btn btn-primary border-dark btn-xl text-uppercase js-scroll-trigger" role="button" href="{{ paramId == '1' ? '/intranet':'/matricula' }}" style="background-color: rgb(255,165,85);border:none;">Iniciar Sesión</a>
     
   </div>
 

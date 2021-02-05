@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-logueo',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogueoComponent implements OnInit {
 
-  constructor() { }
+  constructor( protected route: ActivatedRoute ) {
+   }
+
+   public paramId : string;
 
   ngOnInit(): void {
+    this.paramId = this.route.snapshot.paramMap.get("id");
+    console.log(this.paramId);
   }
+
+  
 
 }
