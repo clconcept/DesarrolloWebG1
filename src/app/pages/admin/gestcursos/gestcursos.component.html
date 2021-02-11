@@ -52,7 +52,7 @@ $(document).ready(function(){
                     <tr>
                         <th>Id</th>
                         <th>Curso<i class="fa fa-sort"></i></th>
-                        <th>Sección</th>
+                        <th>Frecuencia</th>
                         <th>Horario </th>
                         <th>Minimo Alumnos</th>
                         <th>Vacantes</th>
@@ -61,93 +61,26 @@ $(document).ready(function(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Ingles Basico 1</td>
-                        <td>N17B</td>
-                        <td>Miercoles y Jueves 14:00- 16:00</td>
+                    <tr *ngFor="let p of cursos">
+                        <th scope="row">{{p.id}}</th>
+                        <td>{{ p.nombreCurso }}</td>
+                        <td>{{ p.frecuencia }}</td>
+                        <td>{{ p.hora }}</td>
                         <td> 3 </td>
                         <td>15</td>
-                        <td>350</td>
+                        <td>{{ p.costo }}</td>
                         <td>
                             <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
                             <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE15C;</i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Ingles Basico 2</td>
-                        <td>L34A</td>
-                        <td>Lunes y viernes 18:00-20:00 </td>
-                        <td>3</td>                    
-                        <td>15</td>
-                        <td>350</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE15C;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Ingles Basico 3</td>
-                        <td>E23A </td>
-                        <td>Viernes y sábado 17:00-19:00</td>
-                        <td>3</td>
-                        <td>15</td>
-                        <td>350</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE15C;</i></a>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Ingles Intermedio 3</td>
-                        <td>M15I </td>
-                        <td>Martes y Viernes 14:00-16:00</td>
-                        <td>3</td>
-                        <td>15</td> 
-                        <td>350</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE15C;</i></a>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Ingles Intermedio 1</td>
-                        <td>S21I </td>
-                        <td>Lunes y Viernes 19:00-21:00</td>
-                        <td>3</td>
-                        <td>15</td>
-                        <td>350</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE15C;</i></a>
-
-                          </td>
-                    </tr>        
+                    
+                    
+                    
                 </tbody>
             </table>
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
-            </div>
+            
         </div>
     </div>  
 </div>   
