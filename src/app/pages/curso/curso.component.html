@@ -17,11 +17,14 @@
                 <a routerLink="/curso/{{ p.id }}" class="portfolio-link" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                    </div><img class="img-fluid" src='{{ p.image }}'></a>
+                    </div><img class="img-fluid" src='{{ p.imagen }}'></a>
                 <div class="portfolio-caption">
-                    <h4>{{ p.curso }}</h4>
-                    <p class="text-muted"><strong><em>{{ p.price }}</em><br></strong></p>
-                    <p class="text-muted">{{ p.address }}</p>
+                    <h4>{{ p.nombreCurso }}</h4>
+                    <p class="text-muted">{{ p.nombreSede }}</p>
+                    <p class="text-muted">{{ p.frecuencia }}</p>
+                    <p class="text-muted">{{ p.hora }}</p>
+                    <p class="text-muted">Inicio:  {{ p.fechaInicio }}</p>
+                    <p class="text-muted"><strong><em>Costo: S/.  {{ p.costo }}</em><br></strong></p>
                 </div>
             </div>
         </div>
