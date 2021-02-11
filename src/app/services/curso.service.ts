@@ -8,8 +8,9 @@ export class CursoService {
 
   constructor(private readonly http: HttpClient) { }
 
-  getCursos(){
-    return this.http.get('/api/curso/GetCursos');
+  getCursos()
+  {
+     return this.http.get('/api/curso/GetCursos');
   }
   getMatricula(){
     return this.http.get('/api/matricula/GetMatricula');
