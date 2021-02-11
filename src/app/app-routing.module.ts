@@ -30,6 +30,7 @@ const routes: Routes = [
     { path: 'editar', component: EditarComponent },
     { path: 'alumno', component: AlumnoComponent },
     { path: 'intranet', component: IntranetComponent },
+    { path: 'admin/gestcursos/:id', component: GestcursosComponent},
     { path: 'admin/gestcursos', component: GestcursosComponent},
     { path: 'admin/ingcurso', component: IngcursoComponent},
     { path: 'confirmacion', component: ConfirmacionComponent},
