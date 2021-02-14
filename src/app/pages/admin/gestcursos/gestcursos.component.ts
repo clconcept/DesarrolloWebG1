@@ -17,14 +17,14 @@ export class GestcursosComponent implements OnInit {
 
     getCursos(){
       this.cursoService.getCursos().subscribe((rest: any) => {
-        this.cursos = rest.data;
+        this.cursos = rest;
         console.log(this.cursos);
       })
     }
   
     getCursoById(id: number){
       this.cursoService.getCursos().subscribe((rest: any) => {
-        this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
+        this.cursos = rest.filter((item: { id: number; }) => item.id == id);
         console.log(this.cursos);
       })
     }

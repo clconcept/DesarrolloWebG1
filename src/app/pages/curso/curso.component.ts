@@ -24,13 +24,23 @@ export class CursoComponent implements OnInit {
     })
   }
 
-  getCursoById(id: number){
-    this.cursoService.getCursos().subscribe((rest: any) => {
-      this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
+  //getCursoById(id: number){
+    //this.cursoService.getCursos().subscribe((rest: any) => {
+      //this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
+      //console.log(this.cursos);
+    //})
+  //}
+ 
+ getCursoById(id: number){
+   this.cursoService.getCursos().subscribe((rest: any) => {
+      this.cursos = rest.filter((item: { idCurso: number; }) => item.idCurso == id);
       console.log(this.cursos);
     })
   }
  
+
+
+
   ngOnInit(): void {
     this.activateRoute.params.subscribe((params: Params) => {
       if (params.id){

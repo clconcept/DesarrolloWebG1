@@ -1,7 +1,7 @@
 {
     "data":[
         {
-            "id": 1,
+            "IdCurso": 1,
             "nombreCurso": "Ingles Basico 1",
             "nombreSede": "Miraflores",
             "frecuencia": "Lunes a Viernes",
@@ -11,7 +11,7 @@
             "imagen": "assets/img/cursos/curso1.jpg"
         },
         {
-            "id": 2,
+            "IdCurso": 2,
             "nombreCurso": "Ingles Basico 2",
             "nombreSede": "Miraflores",
             "frecuencia": "Lunes a Viernes",
@@ -21,7 +21,7 @@
             "imagen": "assets/img/cursos/curso2.jpg"
         },
         {
-            "id": 3,
+            "IdCurso": 3,
             "nombreCurso": "Ingles Basico 3",
             "nombreSede": "Miraflores",
             "frecuencia": "Lunes a Viernes",
@@ -31,7 +31,7 @@
             "imagen": "assets/img/cursos/curso3.jpg"
         },
         {
-            "id": 4,
+            "IdCurso": 4,
             "nombreCurso": "Ingles Intermedio 1",
             "nombreSede": "Miraflores",
             "frecuencia": "Lunes a Viernes",
@@ -41,7 +41,7 @@
             "imagen": "assets/img/cursos/curso4.jpg"
         },
         {
-            "id": 5,
+            "IdCurso": 5,
             "nombreCurso": "Ingles Intermedio 2",
             "nombreSede": "Miraflores",
             "frecuencia": "Lunes a Viernes",
@@ -51,7 +51,7 @@
             "imagen": "assets/img/cursos/curso5.jpg"
         },
         {
-            "id": 6,
+            "IdCurso": 6,
             "nombreCurso": "Ingles Intermedio 3",
             "nombreSede": "Miraflores",
             "frecuencia": "Lunes a Viernes",
@@ -61,7 +61,7 @@
             "imagen": "assets/img/cursos/curso6.jpg"
         },
         {
-            "id": 7,
+            "IdCurso": 7,
             "nombreCurso": "Portugues Basico 1",
             "nombreSede": "San Borja",
             "frecuencia": "Lunes a Viernes",
@@ -71,7 +71,7 @@
             "imagen": "assets/img/cursos/curso7.jpg"
         },
         {
-            "id": 8,
+            "IdCurso": 8,
             "nombreCurso": "Portugues Basico 2",
             "nombreSede": "San Borja",
             "frecuencia": "Lunes a Viernes",
@@ -81,7 +81,7 @@
             "imagen": "assets/img/cursos/curso8.jpg"
         },
         {
-            "id": 9,
+            "IdCurso": 9,
             "nombreCurso": "Toefl",
             "nombreSede": "San Borja",
             "frecuencia": "Lunes a Viernes",
