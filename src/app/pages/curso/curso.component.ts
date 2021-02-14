@@ -19,7 +19,7 @@ export class CursoComponent implements OnInit {
 
   getCursos(){
     this.cursoService.getCursos().subscribe((rest: any) => {
-      this.cursos = rest.data;
+      this.cursos = rest;
       console.log(this.cursos);
     })
   }

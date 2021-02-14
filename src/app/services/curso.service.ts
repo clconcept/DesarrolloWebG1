@@ -10,7 +10,7 @@ export class CursoService {
 
   getCursos()
   {
-     return this.http.get('/api/curso/GetCursos');
+     return this.http.get('https://localhost:44309/api/Curso/GetCursos');
   }
   getMatricula(){
     return this.http.get('/api/matricula/GetMatricula');
