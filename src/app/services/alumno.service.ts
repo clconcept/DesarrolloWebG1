@@ -10,7 +10,7 @@ export class AlumnoService {
 
   getAlumnos()
   {
-     return this.http.get('/api/alumno/GetAlumnos');
-     //return this.http.get('https://localhost:44309/api/Alumno/GetAlumnos');
+     //return this.http.get('/api/alumno/GetAlumnos');
+     return this.http.get('https://localhost:44309/api/Alumno/GetAlumnos');
   }
 }

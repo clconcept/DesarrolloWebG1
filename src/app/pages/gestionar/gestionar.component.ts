@@ -14,7 +14,7 @@ export class GestionarComponent implements OnInit {
 
   getAlumnos(){
     this.alumnoService.getAlumnos().subscribe((rest: any) => {
-      this.alumnos = rest.data;
+      this.alumnos = rest;
       console.log(this.alumnos);
     })
   }
