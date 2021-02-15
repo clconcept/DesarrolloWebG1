@@ -7,8 +7,7 @@ module.exports = app => {
         var data = require('../json/curso.json');
         res.json(data);
     })    
-
-    app.get('/api/matricula/GetUsuaMatricula', (req, res) => {
+    app.get('/api/alumno/GetAlumnos', (req, res) => {
         var data = require('../json/alumnos.json');
         res.json(data);
     })  
