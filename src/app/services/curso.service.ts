@@ -5,14 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CursoService {
-
+  ruta = "http://localhost:4000"
   constructor(private readonly http: HttpClient) { }
-
-  getCursos()
-  {
-     return this.http.get('https://localhost:44309/api/Curso/GetCursos');
+  getCursos(){
+    return this.http.get(this.ruta + '/api/curso/GetCursos');
   }
+
   getMatricula(){
-    return this.http.get('/api/matricula/GetMatricula');
+    return this.http.get(this.ruta + '/api/matricula/GetMatricula');
   }
 }

@@ -21,6 +21,10 @@ import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { IngcursoComponent } from './pages/admin/ingcurso/ingcurso.component';
 import { GestcursosComponent } from './pages/admin/gestcursos/gestcursos.component';
 import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -47,7 +51,11 @@ import { ConfirmacionComponent } from './pages/confirmacion/confirmacion.compone
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

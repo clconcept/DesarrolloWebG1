@@ -1,5 +1,6 @@
-<div class="container">
-    <form [formGroup]="contactusForm">
+<div class="container" align="center">
+    <img src="assets/img/contactos.png">
+    <form [formGroup]="contactusForm" action="mailto:someone@example.com" method="post" enctype="text/plain">
         <div formGroupName="person">
             <div class="form-group">
                 <label>
@@ -22,36 +23,40 @@
         </div>
         <div class="form-group">
             <label>
-                Direccion:
-                <input type="text" formControlName="address" class="form-control">
+                Telefono:
+                <input type="text" formControlName="phone" class="form-control">
             </label>
         </div>
         <div class="form-group">
             <label>
                 Genero:
-                <div class="form-group form-check">
+                <div class="form-group form-check form-check-inline">
                     <input type="radio" formControlName="gender" class="form-check-input" value="M">
                     <label class="form-check-label">Masculino</label>
                 </div>
-                <div class="form-group form-check">
+                <div class="form-group form-check form-check-inline">
                     <input type="radio" formControlName="gender" class="form-check-input" value="F">
                     <label class="form-check-label">Femenino</label>
                 </div>
             </label>
         </div>
         <div class="form-group">
+            <!--
             <button (click)="updateValues()" class="btn btn-primary">Cargar Datos Iniciales</button>
+            |-->
+            <button (click)="cleanValues()" class="btn btn-info">Limpiar</button>
             |
-            <button (click)="cleanValues()" class="btn btn-info">Limpiar Datos Iniciales</button>
-            |
-            <button (click)="onSubmit()" class="btn btn-success">Enviar Informacion</button>
+            <button (click)="onSubmit()" class="btn btn-success">Enviar</button>
         </div>
     </form>
+
     <br><br>
+    <!---
     <p>
         {{ contactusForm.value | json }}
     </p>
     <p>
         Estado del Formulario: {{ contactusForm.status }}
     </p>
+    -->
 </div>

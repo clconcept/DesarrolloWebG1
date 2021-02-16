@@ -15,41 +15,46 @@ export class CursoComponent implements OnInit {
   
   constructor(private readonly cursoService: CursoService, 
                
-              private activateRoute: ActivatedRoute) { }
+  private activateRoute: ActivatedRoute) { }
 
   getCursos(){
     this.cursoService.getCursos().subscribe((rest: any) => {
-      this.cursos = rest;
+
+        
+      this.cursos = rest.data;      
       console.log(this.cursos);
     })
   }
 
-  //getCursoById(id: number){
-    //this.cursoService.getCursos().subscribe((rest: any) => {
-      //this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
-      //console.log(this.cursos);
-    //})
-  //}
- 
- getCursoById(id: number){
-   this.cursoService.getCursos().subscribe((rest: any) => {
-      this.cursos = rest.filter((item: { idCurso: number; }) => item.idCurso == id);
+  getCursoById(id: number){
+    this.cursoService.getCursos().subscribe((rest: any) => {
+      this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
       console.log(this.cursos);
     })
   }
  
-
-
-
   ngOnInit(): void {
     this.activateRoute.params.subscribe((params: Params) => {
-      if (params.id){
-        this.getCursoById(params.id);
-               
+      if (params.id){        
+        this.getCursoById(params.id);               
       }
       else {
         this.getCursos();
       }
     });
   }
+  buscarDatos(filterValue: string) {
+    if (filterValue.length>0){
+      this.cursoService.getCursos().subscribe((rest: any) => {
+        this.cursos = rest.data.filter(ele => (''+ele.nombreCurso).indexOf(filterValue)!=-1||
+                                              (''+ele.frecuencia).indexOf(filterValue)!=-1||
+                                              (''+ele.nombreSede).indexOf(filterValue)!=-1||
+                                              (''+ele.costo).indexOf(filterValue)!=-1);
+        console.log(this.cursos);
+      })
+    }else{
+      this.getCursos();
+    }
+  }
+
 }

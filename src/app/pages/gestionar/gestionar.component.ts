@@ -1,6 +1,4 @@
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { AlumnoService } from 'src/app/services/alumno.service';
 
 @Component({
   selector: 'app-gestionar',
@@ -9,18 +7,9 @@ import { AlumnoService } from 'src/app/services/alumno.service';
 })
 export class GestionarComponent implements OnInit {
 
-  alumnos = [];
-  constructor(private readonly alumnoService: AlumnoService) { }
-
-  getAlumnos(){
-    this.alumnoService.getAlumnos().subscribe((rest: any) => {
-      this.alumnos = rest;
-      console.log(this.alumnos);
-    })
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getAlumnos();
   }
 
 }

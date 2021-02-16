@@ -7,25 +7,13 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./contactenos.component.css']
 })
 export class ContactenosComponent implements OnInit {
-
-  // contactusForm = new FormGroup({
-  //   person: new FormGroup({
-  //     firstname: new FormControl(''),
-  //     lastname: new FormControl('')
-  //   }),
-    
-  //   email: new FormControl(''),
-  //   address: new FormControl(''),
-  //   gender: new FormControl('')
-  // });
-
   contactusForm = this.fb.group({
     person: this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required]
     }),
     email: ['', Validators.required],
-    address: [''],
+    phone: [''],
     gender: ['']
   });
 
@@ -38,7 +26,7 @@ export class ContactenosComponent implements OnInit {
         lastname: "Huiza"
       },
       email: "james.huiza@dominio.com.pe",
-      address: "Lima, Lima, Lima 17",
+      phone: "94999999",
       gender: "M"
     });
   }
@@ -48,7 +36,8 @@ export class ContactenosComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.contactusForm.value)
+    document.onsubmit;
+    console.log(this.contactusForm.value);
   }
 
   ngOnInit(): void {   }

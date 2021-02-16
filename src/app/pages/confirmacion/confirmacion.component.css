@@ -1,3 +1,4 @@
+
 body {
     color: #566787;
     background: #f5f5f5;
@@ -113,3 +114,22 @@ table.table td i {
     margin-top: 6px;
     font-size: 95%;
 }    
+
+
+.example-container {
+    height: 40vh;
+    width: 98%;
+    overflow: auto;
+  }
+    
+  .example-sticky-toggle-group {
+    margin: 8px;
+  }
+  
+  
+  .mat-table-sticky {
+    opacity: 1;
+  }
+  .mat-table {
+      width:100%;
+  }

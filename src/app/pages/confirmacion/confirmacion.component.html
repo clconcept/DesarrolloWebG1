@@ -11,7 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script>
-$(document).ready(function(){
+$(document).ready(function(){ 
 	$('[data-toggle="tooltip"]').tooltip();
 });
 </script>
@@ -26,121 +26,92 @@ $(document).ready(function(){
                     <div class="col-sm-4">
                         <div class="search-box">
                             <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                            <input type="text" class="form-control" (keyup)="buscarDatos($event.target.value)" placeholder="Buscar&hellip;">
                         </div>
                     </div>
                 </div>
             </div>
+            <!--
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Estado<i class="fa fa-sort"></i></th>
-                        <th>Curso<i class="fa fa-sort"></i></th>
-                        <th>Vacantes</th>
-                        <th>Codigo</th>
-                        <th>Nombres</th>
-                        <th>Fecha</th>
-                        <th>Becado</th>
-                        <th>Costo</th>
-                        <th>Descuento</th>
-                        <th>Ver/Aprobar</th>
+                        <th>ID<i class="fa fa-sort"></i></th>                       
+                        <th>ALUMNO<i class="fa fa-sort"></i></th>                        
+                        <th>CURSO<i class="fa fa-sort"></i></th>                        
+                        <th>INCSCRITOS<i class="fa fa-sort"></i></th>                        
+                        <th>MAXIMO<i class="fa fa-sort"></i></th>                        
+                        <th>MINIMO<i class="fa fa-sort"></i></th>                        
+                        <th>ESTADO<i class="fa fa-sort"></i></th>                        
+                        <th>ACCION<i class="fa fa-sort"></i></th>                         
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Pendiente</td>
-                        <td>Ingles Basico 1</td>
-                        <td>15</td>
-                        <td>100</td>
-                        <td>Thomas Hardy</td>
-                        <td>28/01/2020</td>
-                        <td>No</td>
-                        <td>350</td>
-                        <td>0</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
+                    <tr *ngFor="let col of datasource">
+                        <td>{{col.idmatricula}}</td>
+                        <td>{{col.alumno}}</td>
+                        <td>{{col.curso}}</td>
+                        <td>{{col.inscritos}}</td>
+                        <td>{{col.maximo}}</td>
+                        <td>{{col.minimo}}</td>
+                        <td [ngClass]="{'badge-danger': col.estado == 'RECHAZADO', 'badge-warning': col.estado == 'PENDIENTE', 'badge-success': col.estado == 'MATRICULADO'}">{{col.estado}}</td>
+                        <td style="cursor:pointer;">                        
+                            <a class="Aprueba Matricula" (click)=aprueba(col.alumno) title="View" data-toggle="tooltip"><i class="material-icons">&#xE85F;</i></a>
+                            <a class="Rechaza Matricula" (click)=rechaza(col.alumno) title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE85E;</i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pendiente</td>
-                        <td>Ingles Basico 1</td>
-                        <td>15</td>
-                        <td>100</td>
-                        <td>Thomas Hardy</td>
-                        <td>28/01/2020</td>
-                        <td>No</td>
-                        <td>350</td>
-                        <td>0</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Pendiente</td>
-                        <td>Ingles Basico 1</td>
-                        <td>15</td>
-                        <td>100</td>
-                        <td>Thomas Hardy</td>
-                        <td>28/01/2020</td>
-                        <td>No</td>
-                        <td>350</td>
-                        <td>0</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Pendiente</td>
-                        <td>Ingles Basico 1</td>
-                        <td>15</td>
-                        <td>100</td>
-                        <td>Thomas Hardy</td>
-                        <td>28/01/2020</td>
-                        <td>No</td>
-                        <td>350</td>
-                        <td>0</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Pendiente</td>
-                        <td>Ingles Basico 1</td>
-                        <td>15</td>
-                        <td>100</td>
-                        <td>Thomas Hardy</td>
-                        <td>28/01/2020</td>
-                        <td>No</td>
-                        <td>350</td>
-                        <td>0</td>
-                        <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE252;</i></a>
-                        </td>
-                    </tr>        
                 </tbody>
             </table>
+        -->
+        <div class="example-container mat-elevation-z8">
+            <table mat-table [dataSource]="datasource" matSort class="mat-elevation-z8">
+                <ng-container matColumnDef="idmatricula">
+                    <th mat-header-cell  *matHeaderCellDef mat-sort-header> ID </th>
+                    <td mat-cell *matCellDef="let row" > {{row.idmatricula}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="alumno">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> ALUMNO </th>
+                    <td mat-cell *matCellDef="let row" > {{row.alumno}}</td>
+                </ng-container>
+                <ng-container matColumnDef="curso">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> CURSO </th>
+                    <td mat-cell *matCellDef="let row" > {{row.curso}}</td>
+                </ng-container>
+                <ng-container matColumnDef="inscritos">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> INSCRITOS </th>
+                    <td mat-cell *matCellDef="let row" > {{row.inscritos}}</td>
+                </ng-container>
+                <ng-container matColumnDef="maximo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> MAXIMO </th>
+                    <td mat-cell *matCellDef="let row" > {{row.maximo}}</td>
+                </ng-container>
+                <ng-container matColumnDef="minimo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> MINIMO </th>
+                    <td mat-cell *matCellDef="let row" > {{row.minimo}}</td>
+                </ng-container>
+                <ng-container matColumnDef="estado">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> ESTADO </th>
+                    <td mat-cell *matCellDef="let row">
+                    <span class="badge" [ngClass]="{'badge-danger': row.estado == 'RECHAZADO', 'badge-warning': row.estado == 'PENDIENTE', 'badge-success': row.estado == 'MATRICULADO'}">{{row.estado}}</span>
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="accion">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> ACCION </th>
+                    <td mat-cell *matCellDef="let row" style="cursor:pointer;" > 
+                        <a class="Aprueba Matricula" (click)="aprueba(col.alumno)" title="View" data-toggle="tooltip"><i class="material-icons" style="color:red;" >&#xE85F;</i></a>
+                        <a class="Rechaza Matricula"  (click)="rechaza(col.alumno)" title="Edit" data-toggle="tooltip"><i class="material-icons" style="color:green;">&#xE85E;</i></a></td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="columna; sticky: true;"></tr>
+                <tr mat-row *matRowDef="let row; columns: columna;"  class="example-element-row"></tr>
+                <!-- Row shown when there is no matching data. -->
+                <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No existe datos con el filtro:  "{{input.value}}"</td>
+                </tr>
+           </table>
+        </div>
             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
+                <div class="hint-text">{{fila}} Registros encontradps</div>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
             </div>
         </div>
     </div>  
