@@ -23,7 +23,7 @@ export class MatriculaComponent implements OnInit {
     private activateRoute: ActivatedRoute) { }
 
     getMatricula(){
-      this.cursoService.getMatricula().subscribe((rest: any) => {
+      this.cursoService.getCursoMatricula().subscribe((rest: any) => {
       this.cursos = rest.data;
       console.log(this.cursos);
       })
@@ -37,7 +37,7 @@ export class MatriculaComponent implements OnInit {
         }
             
       getMatriculaById(id: number){
-      this.cursoService.getMatricula().subscribe((rest: any) => {
+      this.cursoService.getCursoMatricula().subscribe((rest: any) => {
       this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
         })
       }   

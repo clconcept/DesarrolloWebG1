@@ -3,6 +3,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import {MatButtonToggleGroup} from '@angular/material/button-toggle';
 import Swal from 'sweetalert2';
 import { element } from 'protractor';
+import { CursoService } from 'src/app/services/curso.service';
+import { ActivatedRoute, Params } from '@angular/router';
+
+
 
 export interface confirmacion {
     idmatricula: number;
@@ -24,7 +28,12 @@ export class ConfirmacionComponent implements OnInit {
   columna: string[] = ['idmatricula','alumno','curso','inscritos','maximo','minimo','estado','accion']
   fila: number=0;
   datasource:MatTableDataSource<confirmacion>;
-  constructor() { }
+  matricula = [];
+ 
+  constructor(private readonly cursoService: CursoService, 
+               
+  private activateRoute: ActivatedRoute) { }
+
 
   ngOnInit(): void {
     let datos:any=[];
@@ -72,6 +81,15 @@ export class ConfirmacionComponent implements OnInit {
 
   buscarDatos(filterValue: string) {
     this.datasource.filter= filterValue.trim().toUpperCase();    
+  }
+
+  getMatricula(){
+    /*
+    this.cursoService.getMatricula().subscribe((rest: any) => {       
+      this.matricula = rest.data;
+      this.fila = rest.length;      
+      console.log(this.matricula);
+    })*/
   }
 
    aprueba(alumno:string){
