@@ -6,8 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
+  ruta = "https://localhost:44309"
   constructor(private readonly http: HttpClient) { }
-  getUsuaMatricula(){
-    return this.http.get('/api/matricula/GetUsuaMatricula');
+  getAlumnoMatricula(){
+    return this.http.get(this.ruta + '/api/Alumno/GetAlumnos');
   }
 }

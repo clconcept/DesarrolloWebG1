@@ -19,7 +19,7 @@
         <div class="row">
 
               <div *ngFor="let p of cursos" class="col-sm-6 col-md-4 portfolio-item">
-                    <a routerLink="/matricula/{{ p.id }}" class="portfolio-link" data-toggle="modal">
+                    <a routerLink="/matricula/{{ p.idCurso }}" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i>
                             </div>
@@ -36,38 +36,38 @@
                         </div>
               </div>
               <div  *ngIf="showMatri == 'false'" class="col-sm-6 col-md-4 portfolio-item">
-                <div *ngFor="let u of idusu" class="col-sm-8 col-md-4 portfolio-item">
-                    <a routerLink="/matricula/{{ u.idusu }}" class="portfolio-link" data-toggle="modal"></a>
+                <div *ngFor="let u of idAlumno" class="col-sm-8 col-md-4 portfolio-item">
+                    <a routerLink="/matricula/{{ u.idAlumno}}" class="portfolio-link" data-toggle="modal"></a>
                     <div class="panel panel-default">
                         <div class="panel-heading">Datos Personales</div>
                         <table class="table">
                           <tr>
                           <th>Código:</th>
-                          <th><h4>{{ u.idusu }}</h4></th>
+                          <th><h4>{{ u.idAlumno }}</h4></th>
                           </tr>
                           <tr>
                             <th>Nombres:</th>
-                            <th>{{ u.nombre}}</th>
+                            <th>{{ u.nombreAlumno}}</th>
                           </tr>
                           <tr>
                             <th>Apellidos:</th>
-                            <th>{{ u.apellido}}</th>
+                            <th>{{ u.apellidoAlumno}}</th>
                           </tr>
                           <tr>
                             <th>Documento Identidad:</th>
-                            <th>{{ u.docIden}}</th>
+                            <th>{{ u.dniAlumno}}</th>
                           </tr>
                           <tr>
                             <th>Dirección:</th>
-                            <th>{{ u.address}}</th>
+                            <th>{{ u.direccionAlumno}}</th>
                           </tr>
                           <tr>
                             <th>Nro. Contacto:</th>
-                            <th>{{ u.telefono}}</th>
+                            <th>{{ u.telefonoAlumno}}</th>
                           </tr>
                           <tr>
                             <th>Correo Electronico:</th>
-                            <th>{{ u.correo}}</th>
+                            <th>{{ u.correoAlumno}}</th>
                           </tr>
                         </table>
                       </div>

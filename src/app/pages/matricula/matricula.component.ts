@@ -13,7 +13,7 @@ export class MatriculaComponent implements OnInit {
 
   cursos = [];
 
-  idusu = [];
+  idAlumno = [];
 
   showMatri = "true";
 
@@ -22,42 +22,42 @@ export class MatriculaComponent implements OnInit {
     private readonly cursoService: CursoService,  
     private activateRoute: ActivatedRoute) { }
 
-    getMatricula(){
+    getCursosMatricula(){
       this.cursoService.getCursoMatricula().subscribe((rest: any) => {
-      this.cursos = rest.data;
+      this.cursos = rest;
       console.log(this.cursos);
       })
       }
 
-      getUsuaMatricula(){
-        this.loginService.getUsuaMatricula().subscribe((rest: any) => {
-        this.idusu = rest.data;
-        console.log(this.idusu);
+      getAlumnoMatricula(){
+        this.loginService.getAlumnoMatricula().subscribe((rest: any) => {
+        this.idAlumno = rest;
+        console.log(this.idAlumno);
         })
         }
             
-      getMatriculaById(id: number){
+      getCursoMatriculaById(id: number){
       this.cursoService.getCursoMatricula().subscribe((rest: any) => {
-      this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
+      this.cursos = rest.filter((item: { idCurso: number; }) => item.idCurso == id);
         })
       }   
       
-      getUsuaMatriculaById(id: string){
-        this.loginService.getUsuaMatricula().subscribe((rest: any) => {
-        this.idusu = rest.data.filter((item: { idusu: string; }) => item.idusu == id);
-        console.log(this.idusu);
+      getAlumnoMatriculaById(id: number){
+        this.loginService.getAlumnoMatricula().subscribe((rest: any) => {
+        this.idAlumno = rest.filter((item: { idAlumno: number; }) => item.idAlumno == id);
+        console.log(this.idAlumno);
         })
       }
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe((params: Params) => {
       if (params.id){
-      this.getMatriculaById(params.id);
-      this.getUsuaMatriculaById("Alum1");
+      this.getCursoMatriculaById(params.id);
+      this.getAlumnoMatriculaById(1);
       this.showMatri = "false";
     }
     else {
-            this.getMatricula();
+            this.getCursosMatricula();
             }
   });
   }
