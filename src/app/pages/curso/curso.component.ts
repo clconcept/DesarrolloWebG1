@@ -18,17 +18,15 @@ export class CursoComponent implements OnInit {
   private activateRoute: ActivatedRoute) { }
 
   getCursos(){
-    this.cursoService.getCursos().subscribe((rest: any) => {
-
-        
-      this.cursos = rest.data;      
+    this.cursoService.getCursos().subscribe((rest: any) => {        
+      this.cursos = rest;      
       console.log(this.cursos);
     })
   }
 
   getCursoById(id: number){
     this.cursoService.getCursos().subscribe((rest: any) => {
-      this.cursos = rest.data.filter((item: { id: number; }) => item.id == id);
+      this.cursos = rest.filter((item: { idCurso: number; }) => item.idCurso == id);
       console.log(this.cursos);
     })
   }
@@ -46,7 +44,7 @@ export class CursoComponent implements OnInit {
   buscarDatos(filterValue: string) {
     if (filterValue.length>0){
       this.cursoService.getCursos().subscribe((rest: any) => {
-        this.cursos = rest.data.filter(ele => (''+ele.nombreCurso).indexOf(filterValue)!=-1||
+        this.cursos = rest.filter(ele => (''+ele.nombreCurso).indexOf(filterValue)!=-1||
                                               (''+ele.frecuencia).indexOf(filterValue)!=-1||
                                               (''+ele.nombreSede).indexOf(filterValue)!=-1||
                                               (''+ele.costo).indexOf(filterValue)!=-1);
