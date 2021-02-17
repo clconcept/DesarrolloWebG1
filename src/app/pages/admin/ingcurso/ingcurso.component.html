@@ -24,39 +24,41 @@ $(document).ready(function(){
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="input_name" class="col-lg-4 control-label">Curso</label>
+                    <label for="input_name" class="col-lg-4 control-label">Nivel</label>
                      <div class="col-lg-8">
-                        <input type="text" class="form-control" id="input_name" placeholder="Nombre del Curso" ngModel required>
-                     </div>
+                        <input type="text" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Nivel del Curso" ngModel required>
+                        <datalist id="datalistOptionsNivel">
+                            <option value="Ingles Basico 1">
+                            <option value="Ingles Basico 2">
+                            <option value="Ingles Basico 3">
+                            <option value="Ingles Intermedio 1">
+                            <option value="Ingles Intermedio 2">
+                            <option value="Ingles Intermedio 3">
+                            <option value="Portugues Basico 1">
+                            <option value="Portugues Basico 2">
+                            <option value="Preparacion para Toefl">
+                        </datalist>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="input_name" class="col-lg-4 control-label">Nivel</label>
+                    <label for="input_name" class="col-lg-4 control-label">Sede</label>
                     <div class="col-lg-8">
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ingrese Nivel" ngModel required>
-                        <datalist id="datalistOptions">
-                            <option value="Inducciòn">
-                            <option value="Intermedio">
-                            <option value="Avanzado">
-                            <option value="Conversación">
-                            <option value="Redacción">  
+                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selwcione Sede" ngModel required>
+                        <datalist id="datalistOptionsSede">
+                            <option value="Miraflores">
+                            <option value="San Borja">
                         </datalist>
                     </div>
                  </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="input_name" class="col-lg-4 control-label">Tipo</label>
+                    <label for="input_name" class="col-lg-4 control-label">Seccion</label>
                      <div class="col-lg-8">
-                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ingrese Tipo" ngModel required>
-                    <datalist id="datalistOptions">
-                            <option value="Niños">
-                            <option value="Jóvenes">
-                            <option value="Adultos">
-                            <option value="Negocios">
-                            <option value="Preparacion TOEFL">  
-                    </datalist>
+                    <input class="form-control"  placeholder="Ingrese Seccion" ngModel required>
+                    
                     </div>
                 </div>
             
@@ -75,12 +77,12 @@ $(document).ready(function(){
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="input_name" class="col-lg-4 control-label">Sede</label>
+                    <label for="input_name" class="col-lg-4 control-label">Modalidad</label>
                      <div class="col-lg-8">
-                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Sede" ngModel required>
-                    <datalist id="datalistOptions">
-                            <option value="Miraflores">
-                            <option value="San Isidro">
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Modalidad" ngModel required>
+                    <datalist id="datalistOptionsmodalidad">
+                            <option value="Presencial">
+                            <option value="Virtual">
                     </datalist>
                     </div>
                 </div>
@@ -91,12 +93,11 @@ $(document).ready(function(){
                     <label for="input_name" class="col-lg-4 control-label">Profesor</label>
                      <div class="col-lg-8">
                     <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Profesor" ngModel required>
-                    <datalist id="datalistOptions">
+                    <datalist id="datalistOptionsprof">
                             <option value="Profesor 1">
                             <option value="Profesor 2">
                             <option value="Profesor 3">
-                            <option value="Profesor 4">
-                            <option value="Profesor 5">  
+                             
                     </datalist>
                     </div>
                 </div>
@@ -105,23 +106,12 @@ $(document).ready(function(){
         </div>            
         
         <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="input_name" class="col-lg-4 control-label">Modalidad</label>
-                     <div class="col-lg-8">
-                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Modalidad" ngModel required>
-                    <datalist id="datalistOptions">
-                            <option value="Virtual">
-                            <option value="Presencial">
-                    </datalist>
-                    </div>
-                </div>
-            </div>
+           
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-4 control-label">Fecha Inicio</label>
                     <div class="col-lg-8">
-                      <input type="date" class="form-control" id="input_inicio" placeholder="Fecha inicio" ngModel required>
+                      <input type="datetime" class="form-control" id="input_inicio" placeholder="Fecha inicio" ngModel required>
                     </div>
                 </div>        
             </div>
@@ -129,20 +119,17 @@ $(document).ready(function(){
                 <div class="form-group">
                     <label for="input_name" class="col-lg-4 control-label">Fecha Fin</label>
                     <div class="col-lg-8">
-                      <input type="date" class="form-control" id="input_fin" placeholder="Fecha fin" ngModel required>
+                      <input type="datetime" class="form-control" id="input_fin" placeholder="Fecha fin" ngModel required>
                     </div>
                 </div>
                 
             </div>
-        </div>       
-        <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <br>
                     <label for="input_name" class="col-lg-4 control-label">Horario</label>
                      <div class="col-lg-8">
                     <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecione Horario" ngModel required>
-                    <datalist id="datalistOptions">
+                    <datalist id="datalistOptionsHora">
                             <option value="Horario 1">
                             <option value="Horario 2">
                             <option value="Horario 3">
@@ -153,9 +140,12 @@ $(document).ready(function(){
                 </div>
         
             </div>
+                   </div>       
+        <div class="row">
+            
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="input_name" class="col-lg-4 control-label">Vacantes totales</label>
+                    <label for="input_name" class="col-lg-4 control-label">Vacantes</label>
                     <div class="col-lg-8">
                         <input type="number" class="form-control" id="input_costo" placeholder="Ingrese vacantes" ngModel required>
                     </div>
@@ -163,12 +153,13 @@ $(document).ready(function(){
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                        <label for="input_name" class="col-lg-4 control-label">Minimo de alumnos</label>
+                        <label for="input_name" class="col-lg-4 control-label">Min Alumnos</label>
                     <div class="col-lg-8">
                         <input type="number" class="form-control" id="input_costo" placeholder="# Minimo de alumnos" ngModel required>
                     </div>
                 </div>         
             </div>
+ 
         </div>          
        <div class="row">
            <div class="col-md-8">
