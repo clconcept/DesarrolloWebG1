@@ -30,16 +30,28 @@ export class GestcursosComponent implements OnInit {
     }
   
 
-  ngOnInit(): void {
-    this.activateRoute.params.subscribe((params: Params) => {
-      if (params.id){
-        this.getCursoById(params.id);
-               
-      }
-      else {
+    ngOnInit(): void {
+      this.activateRoute.params.subscribe((params: Params) => {
+        if (params.id){        
+          this.getCursoById(params.id);               
+        }
+        else {
+          this.getCursos();
+        }
+      });
+    }
+    buscarDatos(filterValue: string) {
+      if (filterValue.length>0){
+        this.cursoService.getCursos().subscribe((rest: any) => {
+          this.cursos = rest.filter(ele => (''+ele.nombreCurso).indexOf(filterValue)!=-1||
+                                                (''+ele.frecuencia).indexOf(filterValue)!=-1||
+                                                (''+ele.nombreSede).indexOf(filterValue)!=-1||
+                                                (''+ele.costo).indexOf(filterValue)!=-1);
+          console.log(this.cursos);
+        })
+      }else{
         this.getCursos();
       }
-    });
+    }
+  
   }
-
-}
