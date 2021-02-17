@@ -11,7 +11,5 @@ export class CursoService {
     return this.http.get(this.ruta + '/api/curso/GetCursos');
   }
 
-  getCursoMatricula(){
-    return this.http.get(this.ruta + '/api/curso/GetCursos');
-  }
+ 
 }
