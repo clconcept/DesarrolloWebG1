@@ -33,7 +33,7 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Nivel: 
-                        <input  formControlName= 'idNivel' class="form-control" list="datalistOptionsNivel"  placeholder="Nivel del Curso" ngModel required>
+                        <input  formControlName= 'idNivel' class="form-control" list="datalistOptionsNivel"  placeholder="Nivel del Curso" >
                         <datalist id="datalistOptionsNivel">
                             <option label="Ingles Basico 1" value="1">
                             <option label="Ingles Basico 2" value="2">
@@ -53,7 +53,7 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Sede: 
-                        <input formControlName='idSede' class="form-control" list="datalistOptionsSede" placeholder="Selecione Sede" ngModel required>
+                        <input formControlName='idSede' class="form-control" list="datalistOptionsSede" placeholder="Selecione Sede" >
                         <datalist id="datalistOptionsSede">
                             <option label="Miraflores" value="1">
                             <option label="San Borja" value="2">
@@ -68,14 +68,14 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Seccion: 
-                        <input type="text" formControlName='seccion' class="form-control"  placeholder="Ingrese Seccion" ngModel required>
+                        <input type="text" formControlName='seccion' class="form-control"  placeholder="Ingrese Seccion" >
                     </label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Costo: 
-                        <input type="number" formControlName='costo' class="form-control"  placeholder="Ingrese costo" ngModel required>
+                        <input type="number" formControlName='costo' class="form-control"  placeholder="Ingrese costo" >
                     </label>
                 </div>
             </div>
@@ -85,7 +85,7 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Modalidad:
-                        <input  formControlName='idModalidad' class="form-control" list="datalistOptionsModalidad" id="exampleDataList" placeholder="Selecione Sede" ngModel required>
+                        <input  formControlName='idModalidad' class="form-control" list="datalistOptionsModalidad" id="exampleDataList" placeholder="Selecione Modalidad" >
                         <datalist id="datalistOptionsModalidad">
                                 <option label="Presencial" value="1">
                                 <option label="Virtual" value="2">
@@ -96,7 +96,7 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Profesor: 
-                        <input  formControlName='idProfesor' class="form-control" list="datalistOptionsprof" id="exampleDataList" placeholder="Selecione Profesor" ngModel required>
+                        <input  formControlName='idProfesor' class="form-control" list="datalistOptionsprof" id="exampleDataList" placeholder="Selecione Profesor" >
                         <datalist id="datalistOptionsprof">
                                 <option label="Acevedo Jhong" value="1">
                                 <option label="Chancos Mendoza" value="2">
@@ -114,14 +114,14 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Fecha Inicio:
-                        <input type="date"  formControlName='fechaInicio' class="form-control"  placeholder="Fecha inicio" ngModel required>
+                        <input type="date"  formControlName='fechaInicio' class="form-control"  placeholder="Fecha inicio" >
                     </label>
                 </div>        
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Fecha Fin: 
-                        <input type="date" class="form-control" formControlName='fechaFin' placeholder="Fecha fin" ngModel required>
+                        <input type="date" class="form-control" formControlName='fechaFin' placeholder="Fecha fin" >
                     </label>
                 </div>                
             </div>
@@ -130,7 +130,7 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Horario:
-                        <input  class="form-control" list="datalistOptionsHora" formControlName='idHorario' placeholder="Selecione Horario" ngModel required>
+                        <input  class="form-control" list="datalistOptionsHora" formControlName='idHorario' placeholder="Selecione Horario" >
                         <datalist id="datalistOptionsHora">
                                 <option label="8am a 10am" value="1">
                                 <option label="10am a 12am" value="2">
@@ -143,7 +143,7 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Activo: 
-                        <input  formControlName='activo' class="form-control" list="datalistOptionsActivo" placeholder="Selecione" ngModel required>
+                        <input  formControlName='activo' class="form-control" list="datalistOptionsActivo" placeholder="Selecione">
                         <datalist id="datalistOptionsActivo">
                             <option label="activo" value="true">
                             <option label="inactivo" value="false">
@@ -159,14 +159,14 @@ $(document).ready(function(){
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="input_name" class="col-lg-6 control-label">Vacantes: 
-                        <input type="number" class="form-control" formControlName='vacantes' placeholder="Ingrese vacantes" ngModel required>
+                        <input type="number" class="form-control" formControlName='vacantes' placeholder="Ingrese vacantes" >
                     </label>
                 </div>                    
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                         <label for="input_name" class="col-lg-6 control-label">Min Alumnos: 
-                            <input type="number" formControlName='minimoAlumnos' class="form-control"  placeholder="# Minimo de alumnos" ngModel required>
+                            <input type="number" formControlName='minimoAlumnos' class="form-control"  placeholder="# Minimo de alumnos" >
                         </label>
                 </div>         
             </div>
@@ -178,7 +178,7 @@ $(document).ready(function(){
                     <label for="imagen" class="col-lg-4 control-label">Adjuntar Imagen </label>
                     
                     <div class="col-lg-8">
-                        <input type="file" class="form-control-file" formControlName='imagen' ngModel required>
+                        <input type="file" class="form-control-file" formControlName='imagen' >
                     </div>
                 </div>
     
