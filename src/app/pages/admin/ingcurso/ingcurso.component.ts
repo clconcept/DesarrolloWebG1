@@ -10,31 +10,32 @@ import { CursoService } from 'src/app/services/curso.service';
 export class IngcursoComponent implements OnInit {
  
   ingcursoForm = this.nuevoCurso.group ({
-    idNivel: ['', Validators.required],
-    idSede: ['', Validators.required],
-    seccion: ['', Validators.required],
-    idModalidad: ['', Validators.required],
-    vacantes: ['', Validators.required],
-    idHorario: ['', Validators.required],
-    idProfesor: ['', Validators.required],
-    costo: ['', Validators.required],
-    fechaInicio: [''],
-    fechaFin: [''],
-    usuario: ['', Validators.required],
-    minimoAlumnos: ['', Validators.required],
-    imagen: ['']
+    IdNivel: ['', Validators.required],
+    IdSede: ['', Validators.required],
+    Seccion: ['', Validators.required],
+    IdModalidad: ['', Validators.required],
+    Vacantes: ['', Validators.required],
+    IdHorario: ['', Validators.required],
+    IdProfesor: ['', Validators.required],
+    Costo: ['', Validators.required],
+    FechaInicio: [''],
+    FechaFin: [''],
+    Usuario: ['', Validators.required],
+    MinimoAlumnos: ['', Validators.required],
+    Imagen: ['']
   });
   
 
   constructor(private nuevoCurso: FormBuilder, private readonly cursoService: CursoService) {
 
    }
-  cursoInsert(data){
-    this.cursoService.insertCurso(data).subscribe((rest: any) => {
+cursoInsert(rest){
+    this.cursoService.insertCurso(rest).subscribe((rest: any) => {
       
       console.log(rest);
     })
-  }
+}
+
   onSubmit(){
     if (this.ingcursoForm.valid)
     {
