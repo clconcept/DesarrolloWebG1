@@ -41,7 +41,7 @@ export class AlumnoComponent implements OnInit {
     
     if (this.form.valid)
     {
-      this.alumnoInsert(this.form.value);
+      this.alumnoInsert(JSON.stringify(this.form.value));
     }
     alert(JSON.stringify(this.form.value));
     this.form.reset();
