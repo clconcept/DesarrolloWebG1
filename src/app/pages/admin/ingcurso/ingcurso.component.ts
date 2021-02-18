@@ -23,7 +23,7 @@ export class IngcursoComponent implements OnInit {
     activo: ['', Validators.required],
     usuario: ['', Validators.required],
     minimoAlumnos: ['', Validators.required],
-    imagen: ['', Validators.required]
+    imagen: ['', ]
   });
   
 
@@ -32,6 +32,7 @@ export class IngcursoComponent implements OnInit {
    }
   cursoInsert(data){
     this.cursoService.insertCurso(data).subscribe((rest: any) => {
+      
       console.log(rest);
     })
   }
