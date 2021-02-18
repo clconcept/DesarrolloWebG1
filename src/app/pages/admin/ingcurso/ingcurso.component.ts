@@ -20,7 +20,6 @@ export class IngcursoComponent implements OnInit {
     costo: ['', Validators.required],
     fechaInicio: ['', Validators.required],
     fechaFin: ['', Validators.required],
-    activo: ['', Validators.required],
     usuario: ['', Validators.required],
     minimoAlumnos: ['', Validators.required],
     imagen: ['', ]
