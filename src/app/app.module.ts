@@ -25,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DetallecursoComponent } from './pages/admin/detallecurso/detallecurso.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     GestcursosComponent,
     IngcursoComponent,
     ConfirmacionComponent,
+    DetallecursoComponent,
     ],
   imports: [
     BrowserModule,
