@@ -18,11 +18,11 @@ export class IngcursoComponent implements OnInit {
     idHorario: ['', Validators.required],
     idProfesor: ['', Validators.required],
     costo: ['', Validators.required],
-    fechaInicio: ['', Validators.required],
-    fechaFin: ['', Validators.required],
+    fechaInicio: [''],
+    fechaFin: [''],
     usuario: ['', Validators.required],
     minimoAlumnos: ['', Validators.required],
-    imagen: ['', ]
+    imagen: ['']
   });
   
 
