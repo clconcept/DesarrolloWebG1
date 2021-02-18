@@ -10,8 +10,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -20,11 +18,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-<script>
-$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();
-});
-</script>
 </head>
 <body>
 <div class="container-xs">
@@ -37,7 +30,7 @@ $(document).ready(function(){
                     <div class="col-sm-9">
                         <div class="search-box">
                             <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Buscar&hellip;">
+                            <input class="form-control ml-2" type="text" class="form-control" (keyup)="buscarDatos($event.target.value)" placeholder="&#xE8B6;Buscar&hellip;"/>
                         </div>
                     </div>
 
@@ -46,11 +39,11 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover table-bordered">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nombres<i class="fa fa-sort"></i></th>
+                        <th>Nombres</th>
                         <th>Apellidos<i class="fa fa-sort"></i></th>
                         <th>Dirección</th>
                         <th>Teléfono</th>
@@ -60,72 +53,19 @@ $(document).ready(function(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>José Miguel</td>
-                        <td>Chumpitaz Huarcaya</td>
-                        <td>Av. 2 de Mayo #1080 - VMT</td>
-                        <td>914918780</td>
-                        <td>u201712334@upc.edu.pe</td>
-                        <td>45191871</td>
+                    <tr *ngFor="let a of alumnos| paginate: { itemsPerPage: count, currentPage: p }">
+                        <td>{{ a.idAlumno        }}</td>
+                        <td>{{ a.nombreAlumno    }}</td>
+                        <td>{{ a.apellidoAlumno  }}</td>
+                        <td>{{ a.direccionAlumno }}</td>
+                        <td>{{ a.telefonoAlumno  }}</td>
+                        <td>{{ a.correoAlumno    }}</td>
+                        <td>{{ a.dniAlumno       }}</td>
                         <td>
                             <a href="editar" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
                             <a href="#consulta" class="delete" title="Delete" data-toggle="modal"><i class="material-icons"></i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>José Miguel</td>
-                        <td>Chumpitaz Huarcaya</td>
-                        <td>Av. 2 de Mayo #1080 - VMT</td>
-                        <td>914918780</td>
-                        <td>u201712334@upc.edu.pe</td>
-                        <td>45191871</td>
-                        <td>
-                            <a href="editar" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a href="#consulta" class="delete" title="Delete" data-toggle="modal"><i class="material-icons"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>José Miguel</td>
-                        <td>Chumpitaz Huarcaya</td>
-                        <td>Av. 2 de Mayo #1080 - VMT</td>
-                        <td>914918780</td>
-                        <td>u201712334@upc.edu.pe</td>
-                        <td>45191871</td>
-                        <td>
-                            <a href="editar" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a href="#consulta" class="delete" title="Delete" data-toggle="modal"><i class="material-icons"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>José Miguel</td>
-                        <td>Chumpitaz Huarcaya</td>
-                        <td>Av. 2 de Mayo #1080 - VMT</td>
-                        <td>914918780</td>
-                        <td>u201712334@upc.edu.pe</td>
-                        <td>45191871</td>
-                        <td>
-                            <a href="editar" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a href="#consulta" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>José Miguel</td>
-                        <td>Chumpitaz Huarcaya</td>
-                        <td>Av. 2 de Mayo #1080 - VMT</td>
-                        <td>914918780</td>
-                        <td>u201712334@upc.edu.pe</td>
-                        <td>45191871</td>
-                        <td>
-                            <a href="editar" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a href="#consulta" class="delete" title="Delete" data-toggle="modal"><i class="material-icons"></i></a>
-                        </td>
-                    </tr> 
-                    
                     <div id="consulta" class="modal fade">
                         <div class="modal-dialog modal-confirm">
                             <div class="modal-content">
@@ -145,24 +85,19 @@ $(document).ready(function(){
                                 </div>
                             </div>
                         </div>
-                    </div> 
-
+                    </div>
                 </tbody>
             </table>
             <div class="clearfix">
+                <!--
                 <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
+                -->
                 <ul class="pagination">
-                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
                 </ul>
             </div>
         </div>
     </div>  
-</div>   
+</div>
 </body>
 </html>

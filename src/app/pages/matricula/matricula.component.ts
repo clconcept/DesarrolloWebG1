@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CursoService } from 'src/app/services/curso.service';
-import { LoginService } from 'src/app/services/login.service';
+import { MatriculaService } from 'src/app/services/matricula.service';
 
 import { ActivatedRoute, Params } from '@angular/router';
 
@@ -18,32 +17,32 @@ export class MatriculaComponent implements OnInit {
   showMatri = "true";
 
   constructor(
-    private readonly loginService: LoginService,
-    private readonly cursoService: CursoService,  
+ 
+    private readonly matriculaService: MatriculaService,  
     private activateRoute: ActivatedRoute) { }
 
     getCursosMatricula(){
-      this.cursoService.getCursoMatricula().subscribe((rest: any) => {
+      this.matriculaService.getCursoMatricula().subscribe((rest: any) => {
       this.cursos = rest;
       console.log(this.cursos);
       })
       }
 
       getAlumnoMatricula(){
-        this.loginService.getAlumnoMatricula().subscribe((rest: any) => {
+        this.matriculaService.getAlumnoMatricula().subscribe((rest: any) => {
         this.idAlumno = rest;
         console.log(this.idAlumno);
         })
         }
             
       getCursoMatriculaById(id: number){
-      this.cursoService.getCursoMatricula().subscribe((rest: any) => {
+      this.matriculaService.getCursoMatricula().subscribe((rest: any) => {
       this.cursos = rest.filter((item: { idCurso: number; }) => item.idCurso == id);
         })
       }   
       
       getAlumnoMatriculaById(id: number){
-        this.loginService.getAlumnoMatricula().subscribe((rest: any) => {
+        this.matriculaService.getAlumnoMatricula().subscribe((rest: any) => {
         this.idAlumno = rest.filter((item: { idAlumno: number; }) => item.idAlumno == id);
         console.log(this.idAlumno);
         })

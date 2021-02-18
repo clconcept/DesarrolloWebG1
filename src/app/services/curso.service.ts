@@ -10,8 +10,10 @@ export class CursoService {
   getCursos(){
     return this.http.get(this.ruta + '/api/curso/GetCursos');
   }
-
-  getCursoMatricula(){
-    return this.http.get(this.ruta + '/api/curso/GetCursos');
+  insertCurso(body){
+    return this.http.post<any>(this.ruta + '/api/Curso/CrearCurso', body);
+  }
+  deleteCurso(a){
+    return this.http.post<any> (this.ruta + '/api/Curso/EliminarCurso',a);
   }
 }
