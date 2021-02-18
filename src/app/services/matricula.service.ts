@@ -16,4 +16,6 @@ export class MatriculaService {
   getAlumnoMatricula(){
     return this.http.get(this.ruta + '/api/Alumno/GetAlumnos');
   }
+
+
 }
