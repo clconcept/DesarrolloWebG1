@@ -18,6 +18,6 @@ export class LogueoComponent implements OnInit {
     console.log(this.paramId);
   }
 
-  
+
 
 }
